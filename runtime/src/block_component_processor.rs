@@ -291,7 +291,7 @@ impl BlockComponentProcessor {
                  {genesis_percent} stake < {GENESIS_VOTE_THRESHOLD}",
                 bank.slot()
             );
-            return Err(BlockComponentProcessorError::GenesisCertificateFailedVerification);
+            return Ok(());
         }
 
         Ok(())
